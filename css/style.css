@@ -1,0 +1,177 @@
+/* #CCD9F7 lavender */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #404040;
+  text-align: center;
+}
+
+/* =======
+TYPOGRAPHY
+======= */
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 300;
+  color: #000;
+  font-family: "Dancing Script", cursive;
+}
+
+h1 + p {
+  color: purple;
+  font-weight: 900;
+  font-size: 1.3125rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.3125;
+  margin: 0;
+}
+
+h2 + p {
+  font-weight: 900;
+  color: purple;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.top-text {
+  font-size: 0.625rem;
+  margin: 0;
+  padding-top: 2px;
+  color: purple;
+  font-weight: 900;
+  text-transform: uppercase;
+  order: -1;
+  border-top: 5px solid purple;
+  border-image: linear-gradient(to left, purple, hotpink) 1;
+}
+
+.fine-print {
+  font-size: 0.625rem;
+  letter-spacing: 1px;
+}
+
+strong {
+  font-weight: 900;
+}
+
+/* ==========
+INTRO SECTION 
+========== */
+
+.intro {
+  background-image: url(../img/main_img.jpg);
+  background-color: #ffe6f7;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0 0.5em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 50vh;
+  text-shadow: 2px 2px 3px #fff;
+}
+
+/* =========
+MAIN-CONTENT 
+========= */
+
+.main-content {
+  padding: 2em 1em;
+}
+
+.main-content h2 {
+  font-family: "Dancing Script", cursive;
+}
+
+.intro > *,
+.main-content > * {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========
+FORM SECTION
+========= */
+
+.email-collector {
+  width: 80%;
+  max-width: 300px;
+}
+
+input,
+.btn {
+  width: 100%;
+  border-radius: 3px;
+}
+
+input {
+  font-family: inherit;
+  text-align: inherit;
+  padding: 0.25em;
+  border: 1px solid #404040;
+  transform: scale(1);
+  transition: transform 250ms;
+}
+
+input:focus {
+  transform: scale(1.1);
+}
+
+.btn-primary {
+  border-image: linear-gradient(to right, purple, hotpink) 1;
+  transform: scale(1);
+  transition: transform 250ms;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  transform: scale(1.1);
+}
+
+/* =====
+MEDIA Q
+===== */
+
+@media (min-width: 600px) {
+  body {
+    font-size: 1.125rem;
+    display: flex;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2,
+  h1 + p {
+    font-size: 1.75rem;
+  }
+
+  .intro {
+    background-image: url(../img/intro_img.jpg);
+    font-weight: 700;
+  }
+
+  .intro,
+  .main-content {
+    width: 50%;
+    min-height: 100vh;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
